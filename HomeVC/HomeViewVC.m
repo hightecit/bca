@@ -28,7 +28,7 @@
     settingbtn = [UIButton buttonWithType:UIButtonTypeCustom];
     
    
-    this is test
+    
     
     
     
