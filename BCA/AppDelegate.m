@@ -9,10 +9,40 @@
 #import "AppDelegate.h"
 
 @implementation AppDelegate
-
+@synthesize arrImageDisplay,arrTitle,arrDetail,navController,maindic,arrTitle1;
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
+     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+     navController = [storyboard instantiateViewControllerWithIdentifier:@"Home"];
+     self.window.rootViewController = navController;
+    
+    [application setStatusBarHidden:YES];
+    
+    arrImageDisplay=@[@"1.jpg",@"2.jpg",@"3.jpg",@"4.jpg",@"6.jpg"];
+    
+    maindic = @{@"A" : @[@"Andrew Simonds", @"Angelina Fernandes"],@"B" : @[@"Bella D'costa", @"Bittu Verma", @"Brittanie Gonzalves"]};
+//                @"C" : @[@"Camel", @"Cockatoo"],
+//                @"D" : @[@"Dog", @"Donkey"],
+//                @"E" : @[@"Emu"],
+//                @"G" : @[@"Giraffe", @"Greater Rhea"],
+//                @"H" : @[@"Hippopotamus", @"Horse"],
+//                @"K" : @[@"Koala"],
+//                @"L" : @[@"Lion", @"Llama"],
+//                @"M" : @[@"Manatus", @"Meerkat"],
+//                @"P" : @[@"Panda", @"Peacock", @"Pig", @"Platypus", @"Polar Bear"],
+//                @"R" : @[@"Rhinoceros"],
+//                @"S" : @[@"Seagull"],
+//                @"T" : @[@"Tasmania Devil"],
+//                @"W" : @[@"Whale", @"Whale Shark", @"Wombat"]};
+    
+    
+    arrTitle = [[maindic allKeys] sortedArrayUsingSelector:@selector(localizedCaseInsensitiveCompare:)];
+
+    
+    arrTitle1 = @[@"Andrew Simonds",@"Angelina Fernandes",@"Brad Williams",@"Bella D'costa",@"Bittu Verma",@"Brittanie Gonzalves"];
+    arrDetail=@[@"Creative Designer",@"Managing Director",@"Creative Designer",@"iPhone Developer",@"It was Great Party yesterday",@"Great football match"];
+   
+    
     return YES;
 }
 							

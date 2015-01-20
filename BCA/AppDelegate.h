@@ -8,8 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
-
+@interface AppDelegate : UIResponder <UIApplicationDelegate>{
+    
+   
+}
+@property (strong, nonatomic) NSArray *arrImageDisplay;
+@property (strong, nonatomic) NSArray *arrTitle;
+@property (strong, nonatomic) NSArray *arrTitle1;
+@property (strong, nonatomic) NSArray *arrDetail;
 @property (strong, nonatomic) UIWindow *window;
-
+@property (strong, nonatomic) UINavigationController *navController;
+@property (strong, nonatomic) NSDictionary *maindic;
 @end

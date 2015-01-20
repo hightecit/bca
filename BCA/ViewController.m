@@ -13,17 +13,40 @@
 @end
 
 @implementation ViewController
-
+@synthesize login;
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+ 
+    login.layer.borderWidth=1.0;
+    login.layer.cornerRadius = 5.0;
+    login.layer.borderColor = [UIColor grayColor].CGColor;
+	
 }
+
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    
+}
+
+-(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
+
+{
+    
+    [self.view endEditing:YES];
+    
+}
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+
+{
+    
+    [textField resignFirstResponder];
+    
+    return YES;
+    
 }
 
 @end
